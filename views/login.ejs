@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<title>login form</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	.main{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.form1{
+	}
+	.btn{
+		padding: 2px;
+		text-decoration: none;
+	}
+</style>
+<body>
+	<div class="main">
+	<div class="login">
+<form class="form1" >
+	<div class="name">
+		<label for="email">email</label>
+		<input type="email" id="email" name="email" required>
+	</div>
+	<div class="password">
+		<label for="password"></label>>Password</label>
+		<input type="password" id="password" name="password" required>	
+	</div>
+	<button class="btn" type="submit">submit</button>
+	<button class="btn" type="reset">refresh</button>
+</form>
+</div>
+</div>
+<script>
+	const form = document.querySelector('form');
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+
+		//get values
+		const email = form.email.value;
+		const password = form.password.value;
+
+		console.log(email, password);
+	})
+</script>
+</body>
+</html>
